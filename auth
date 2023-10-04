@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Redirect and Query String Capture</title>
+</head>
+<body>
+    <h1>Enter your website's URL:</h1>
+    <form id="urlForm">
+        <input type="text" id="urlInput" placeholder="Enter URL">
+        <button type="submit">Go</button>
+    </form>
 
+    <h2>Redirected URL:</h2>
+    <p id="redirectedUrl"></p>
+
+    <h2>Query String Parameters:</h2>
+    <ul id="queryParameters"></ul>
+
+    <script>
+        document.getElementById('urlForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const urlInput = document.getElementById('urlInput').value;
+
+            // Redirect to the entered URL
+            window.location.href = urlInput;
+
+            // Capture and display the redirected URL
+            const redirectedUrl = window.location.href;
+            document.getElementById('redirectedUrl').textContent = redirectedUrl;
+
+            // Capture and display query string parameters
+            const queryString = redirectedUrl.split('?')[1];
+            const queryParametersList = document.getElementById('queryParameters');
+            queryParametersList.innerHTML = '';
+
+            if (queryString) {
+                const queryParams = new URLSearchParams(queryString);
+                queryParams.forEach((value, key) => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${key}: ${value}`;
+                    queryParametersList.appendChild(listItem);
+                });
+            } else {
+                const listItem = document.createElement('li');
+                listItem.textContent = 'No query string parameters';
+                queryParametersList.appendChild(listItem);
+            }
+        });
+    </script>
+</body>
+</html>
