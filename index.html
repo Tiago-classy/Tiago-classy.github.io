@@ -128,7 +128,7 @@ console.log("Ninja touched PVTS");
 }
 
 async function  apssflyercallAND() {
-    fetch('https://impression.appsflyer.com/com.betway.sports?pid=playhilllto_int&af_siteid=testview&c=TESTROLA&af_c_id=TESTROLA&af_ad_id=TESTROLA&af_adset_id=TESTROLA&af_viewthrough_lookback=24h', {
+    fetch('https://app.appsflyer.com/com.casumo.casino?pid=playhilllto_int&af_siteid=testview&c=TESTROLA&af_c_id=TESTROLA&af_ad_id=TESTROLA&af_adset_id=TESTROLA&af_viewthrough_lookback=24h', {
         mode: 'no-cors',
         credentials: 'include',
         redirect: 'follow', 
@@ -155,12 +155,42 @@ async function  apssflyercallAND() {
     });
 }
 
-console.log("Ninja touched APPSFLYER");
+console.log("Ninja touched APPSFLYER Android");
 
 
 
 apssflyercallAND();
+async function  apssflyercallIOS() {
+    fetch('https://app.appsflyer.com/id1071775157?pid=playhilllto_int&af_siteid=testview&c=TESTROLA&af_c_id=TESTROLA&af_ad_id=TESTROLA&af_adset_id=TESTROLA&af_viewthrough_lookback=24h', {
+        mode: 'no-cors',
+        credentials: 'include',
+        redirect: 'follow', 
+    }).then(html=> {
+        console.log(html)
+    })
+    .then(response => {
+        // Since no-cors mode prevents access to the response, we need a workaround.
+        // Assuming we want to update the element to indicate the request was made.
+        console.log("response.status =", response.status);
+        if (response.ok) {
+            return 'Request was successful!';
+        } else {
+            throw new Error('Network response was not ok');
+        }
+    })
+    .then(result => {
+        document.getElementById('ninjaresult').textContent = result;
+        console.log('Response from apssflyercall:', result);
+    })
+    .catch(error => {
+        document.getElementById('ninjaresult').textContent = 'Error: ' + error.message;
+        console.error('Fetch error:', error);
+    });
+}
+
+console.log("Ninja touched APPSFLYER Android");
 PVTS();
+apssflyercallIOS();
 
 
 
