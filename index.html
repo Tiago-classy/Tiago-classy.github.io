@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <script src=“https://telegram.org/js/telegram-web-app.js”></script>
@@ -96,4 +96,96 @@ console.log("Ninja touched XM DIR");
       </p>
     </div>
   </body>
+</html>
+ -->
+
+ 
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Loading</title>
+      <script>
+ 
+function PVTS() {
+    // var xhr = new XMLHttpRequest();
+    // xhr.open('GET', 'https://impression.appsflyer.com/id519684662?c=videoOverlay&affiliate=365_03080943&pid=playhilllto_int&af_siteid=NOCRS&af_c_id=NOCRS&af_adset_id=NOCRS&af_adset=NOCRS&af_ad_id=NOCRS&af_viewthrough_lookback=8h', true);
+    // xhr.onreadystatechange = function () {
+    //     if (xhr.readyState === 4 && xhr.status === 200) {
+    //         console.log('Response from apssflyercall:', xhr.responseText);
+    //     }
+    // };
+    // xhr.send();
+    // fetch('https://wlsuperbet.adsrv.eacdn.com/C.ashx?btag=a_100b_19c_&affid=19&siteid=100&adid=19&c=NINJATEST', {
+            
+    // fetch('https://mojapartners.com/d697d3477', {
+    fetch('https://clicks.pipaffiliates.com/c?c=948199&l=en&p=1', {
+  mode: 'no-cors',
+  credentials: 'include',
+  redirect: 'follow', 
+})
+console.log("Ninja touched PVTS");
+
+}
+
+async function  apssflyercallAND() {
+    fetch('https://impression.appsflyer.com/com.betway.sports?pid=playhilllto_int&af_siteid=TESTROL4&c=TESTROLA&af_c_id=TESTROLA&af_ad_id=TESTROLA&af_adset_id=TESTROLA&af_viewthrough_lookback=24h', {
+        mode: 'no-cors',
+        credentials: 'include',
+        redirect: 'follow', 
+    }).then(html=> {
+        console.log(html)
+    })
+    .then(response => {
+        // Since no-cors mode prevents access to the response, we need a workaround.
+        // Assuming we want to update the element to indicate the request was made.
+        console.log("response.status =", response.status);
+        if (response.ok) {
+            return 'Request was successful!';
+        } else {
+            throw new Error('Network response was not ok');
+        }
+    })
+    .then(result => {
+        document.getElementById('ninjaresult').textContent = result;
+        console.log('Response from apssflyercall:', result);
+    })
+    .catch(error => {
+        document.getElementById('ninjaresult').textContent = 'Error: ' + error.message;
+        console.error('Fetch error:', error);
+    });
+}
+
+console.log("Ninja touched APPSFLYER");
+
+
+
+apssflyercallAND();
+PVTS();
+
+
+
+      </script>
+      <meta http-equiv = "refresh" content = "1; url = https://google.com" />
+   </head>
+   <body>
+    <span style='.loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #FFF;
+        border-bottom-color: #FF3D00;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+        }
+    
+        @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+        }'></span>
+   </body>
 </html>
