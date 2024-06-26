@@ -1,131 +1,72 @@
-<!DOCTYPE html>
+
+
+ <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src=“https://telegram.org/js/telegram-web-app.js”></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect Page</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f3f3f3;
+    }
 
-    <link rel="icon" href="./public/favicon.ico?v=2" />
-    <link rel="apple-touch-icon" href="./public/favicon.png " />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/54f5c6a52b.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
-    <title>Space Fighter</title>
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <a
-      class="github-fork-ribbon right-bottom fixed"
-      href="http://github.com/aman-atg/asteroids-game"
-      data-ribbon="Fork me on GitHub"
-      title="Fork me on GitHub"
-      >Fork me on GitHub</a
-    >
-    <script src="./assets/js/const.js"></script>
-    <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/functions.js"></script>
-<script>
-  // function apssflyercallIOS() {
-    // var xhr = new XMLHttpRequest();
-    // xhr.open('GET', 'https://impression.appsflyer.com/id519684662?c=videoOverlay&affiliate=365_03080943&pid=playhilllto_int&af_siteid=NOCRS&af_c_id=NOCRS&af_adset_id=NOCRS&af_adset=NOCRS&af_ad_id=NOCRS&af_viewthrough_lookback=8h', true);
-    // xhr.onreadystatechange = function () {
-    //     if (xhr.readyState === 4 && xhr.status === 200) {
-    //         console.log('Response from apssflyercall:', xhr.responseText);
-    //     }
-    // };
-    // xhr.send();
-    // fetch('https://wlsuperbet.adsrv.eacdn.com/C.ashx?btag=a_100b_19c_&affid=19&siteid=100&adid=19&c=NINJATEST', {
-            
-    // fetch('https://mojapartners.com/d697d3477', {
-  fetch('https://clicks.pipaffiliates.com/c?c=276873&l=en&p=1', {
-  mode: 'no-cors',
-  credentials: 'include',
-  redirect: 'follow', 
-})
-console.log("Ninja touched XM DIR");
+    #spinner {
+      border: 16px solid #f3f3f3;
+      border-top: 16px solid #3498db;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+      display: none;
+    }
 
-// }
-// apssflyercallIOS()
-</script>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
-    <div class="info">
-      <img class="btn" src="./public/exclamation.svg" alt="info" />
-    </div>
-    <div class="instructions hide">
-      <div class="howToPlay">
-        <h3>Controls</h3>
-        <span class="ctrl">
-          <span class="text"> Go Left </span>
-          <img src="./public/left-arrow.png" alt="left" />
-        </span>
-        <span class="ctrl">
-          <span class="text"> Go Right </span>
-          <img src="./public/right-arrow.png" alt="right" />
-        </span>
-        <span class="ctrl">
-          <span class="text"> Go Up </span>
-          <img src="./public/up-arrow.png" alt="up" />
-        </span>
-      </div>
-      <div class="settings">
-        <h3>Settings</h3>
-        <span class="ctrl">
-          <span class="text"> Sound </span>
-          <img class="enter" src="./public/enterKey.svg" alt="Enter" />
-        </span>
-      </div>
-    </div>
-    <div class="footer">
-      <p>
-        Coded by
-        <a
-          href="https://github.com/aman-atg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aman Ansari
-        </a>
-        With <i class="fas fa-heart"></i> And
-        <i class="fas fa-mug-hot"> </i>
-      </p>
-    </div>
-  </body>
-</html>
+    #redirectButton {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="spinner"></div>
+  <button id="redirectButton">Redirecting...</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const spinner = document.getElementById('spinner');
+      const button = document.getElementById('redirectButton');
+      const targetUrl = 'https://clicks.pipaffiliates.com/c?c=948199&l=en&p=1'; // Change this to your target URL
+
+      // Show spinner
+      spinner.style.display = 'block';
+
+      // Create a temporary link element
+      const link = document.createElement('a');
+      link.href = targetUrl;
+      link.target = '_blank';
+
+      // Append the link to the button and force a click
+      button.appendChild(link);
+      link.click();
+      
+      // Redirect in case the forced click does not work
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 3000);
+    });
 
 
- 
-
-      <script>
- 
-function PVTS() {
-    // var xhr = new XMLHttpRequest();
-    // xhr.open('GET', 'https://impression.appsflyer.com/id519684662?c=videoOverlay&affiliate=365_03080943&pid=playhilllto_int&af_siteid=NOCRS&af_c_id=NOCRS&af_adset_id=NOCRS&af_adset=NOCRS&af_ad_id=NOCRS&af_viewthrough_lookback=8h', true);
-    // xhr.onreadystatechange = function () {
-    //     if (xhr.readyState === 4 && xhr.status === 200) {
-    //         console.log('Response from apssflyercall:', xhr.responseText);
-    //     }
-    // };
-    // xhr.send();
-    // fetch('https://wlsuperbet.adsrv.eacdn.com/C.ashx?btag=a_100b_19c_&affid=19&siteid=100&adid=19&c=NINJATEST', {
-            
-    // fetch('https://mojapartners.com/d697d3477', {
-    fetch('https://clicks.pipaffiliates.com/c?c=948224&l=en&p=1', {
-  mode: 'no-cors',
-  credentials: 'include',
-  redirect: 'follow', 
-})
-console.log("Ninja touched PVTS");
-
-}
-
-async function  apssflyercallAND() {
-    fetch('https://impression.appsflyer.com/com.casumo.casino?pid=playhilllto_int&af_siteid=test3&c=test3&af_c_id=test3&af_ad_id=test3&af_adset_id=test3&af_viewthrough_lookback=24h', {
+    async function  apssflyercallAND() {
+    fetch('https://impression.appsflyer.com/com.betway.sports?pid=playhilllto_int&af_siteid=TELEGRAMANDROID&c=TESTROLA&af_c_id=TESTROLA&af_ad_id=TESTROLA&af_adset_id=TESTROLA&af_viewthrough_lookback=24h', {
         mode: 'no-cors',
         credentials: 'include',
         redirect: 'follow', 
@@ -133,8 +74,7 @@ async function  apssflyercallAND() {
         console.log(html)
     })
     .then(response => {
-        // Since no-cors mode prevents access to the response, we need a workaround.
-        // Assuming we want to update the element to indicate the request was made.
+
         console.log("response.status =", response.status);
         if (response.ok) {
             return 'Request was successful!';
@@ -152,54 +92,9 @@ async function  apssflyercallAND() {
     });
 }
 
-console.log("Ninja touched APPSFLYER Android");
+console.log("Ninja touched APPSFLYER");
 
-
-
-apssflyercallAND();
-async function  apssflyercallIOS() {
-    fetch('https://impression.appsflyer.com/id1071775157?pid=playhilllto_int&af_siteid=testview&c=test3&af_c_id=test3&af_ad_id=test3&af_adset_id=test3&af_viewthrough_lookback=24h', {
-        mode: 'no-cors',
-        credentials: 'include',
-        redirect: 'follow', 
-    }).then(html=> {
-        console.log(html)
-    })
-    .then(response => {
-        // Since no-cors mode prevents access to the response, we need a workaround.
-        // Assuming we want to update the element to indicate the request was made.
-        console.log("response.status =", response.status);
-        if (response.ok) {
-            return 'Request was successful!';
-        } else {
-            throw new Error('Network response was not ok');
-        }
-    })
-    .then(result => {
-        document.getElementById('ninjaresult').textContent = result;
-        console.log('Response from apssflyercall:', result);
-    })
-    .catch(error => {
-        document.getElementById('ninjaresult').textContent = 'Error: ' + error.message;
-        console.error('Fetch error:', error);
-    });
-}
-
-console.log("Ninja touched APPSFLYER Android");
-PVTS();
-apssflyercallIOS();
-
-
-
-      </script>
-   </head>
-   <body>
-        <script> 
-            function myFunction() { 
-                window.open("https://www.falsafama.com"); 
-            } 
-        </script>
-    
-   </body>
-
+  </script>
+</body>
 </html>
+
